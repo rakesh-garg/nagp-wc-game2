@@ -1,0 +1,25 @@
+<button
+    class="start"
+    *ngIf="!boardService.isInProgress()"
+    (click)="boardService.startGame()">
+  Start Game
+</button>
+
+<button
+    class="stop"
+    *ngIf="boardService.isInProgress()"
+    (click)="boardService.initGame()">
+  Stop Game
+</button>
+<hr>
+<app-tile
+    *ngFor="let value of boardService.content; let i = index"
+    [value]="value"
+    [index]="i"
+    (click)="boardService.moveTile(i)"
+    (swipeup)="boardService.move('up')"
+    (swipedown)="boardService.move('down')"
+    (swipeleft)="boardService.move('left')"
+    (swiperight)="boardService.move('right')"
+>
+</app-tile>
