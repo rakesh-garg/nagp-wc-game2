@@ -3,7 +3,7 @@ import { keyToDirection } from '../defs';
 import { BoardService } from './board.service';
 
 @Component({
-  selector: 'board-game',
+  selector: 'nagp-board-game',
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss']
 })

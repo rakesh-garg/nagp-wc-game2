@@ -1,11 +1,16 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { BoardService } from './board-game/board.service';
+import { Component, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
+import { BoardComponent } from './board-game/board.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-board-game',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'Board Game';
-  constructor() {}
+  title = 'BoardGame';
+  constructor(private injector: Injector) {
+    const el = createCustomElement(BoardComponent, { injector });
+    customElements.define('board-game', el);
+  }
+  ngDoBootstrap() {}
 }
