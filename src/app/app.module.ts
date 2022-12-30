@@ -8,7 +8,7 @@ import { NgModule } from '@angular/core';
 import * as Hammer from 'hammerjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent } from './board/board.component';
+import { BoardComponent } from './board-game/board.component';
 import { TileComponent } from './tile/tile.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
