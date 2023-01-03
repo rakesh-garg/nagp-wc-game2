@@ -2,14 +2,14 @@
     class="start"
     *ngIf="!boardService.isInProgress()"
     (click)="boardService.startGame()">
-  Start Game
+  Play
 </button>
 
 <button
     class="stop"
     *ngIf="boardService.isInProgress()"
     (click)="boardService.initGame()">
-  Stop Game
+  Restart
 </button>
 <hr>
 <app-tile
